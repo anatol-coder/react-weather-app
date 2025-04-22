@@ -1,9 +1,11 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
+import Weather from "./Weather";
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header btn btn-primary">Hello from React</header>
+      <Weather />
       <footer>
         This project was coded by Anna Wysota and is{" "}
         <a
