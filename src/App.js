@@ -2,11 +2,11 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import Weather from "./Weather";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <Weather />
+        <Weather defaultCity="London" />
         <footer>
           <p>
             This project was coded by Anna Wysota and is{" "}
@@ -31,5 +31,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

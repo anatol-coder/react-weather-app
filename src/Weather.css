@@ -36,6 +36,10 @@
 .Weather li span {
   color: #f87082;
 }
+
+.Weather li .description {
+  color: #a8a8a8;
+}
 .Weather ul {
   padding: 0;
 }
