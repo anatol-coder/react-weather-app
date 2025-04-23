@@ -3,18 +3,20 @@ import "./Weather.css";
 import axios from "axios";
 
 export default function Weather(props) {
-  const [ready, setReady] = useState(false);
-  const [weatherData, setWeatherData] = useState({});
+  const [weatherData, setWeatherData] = useState({ ready: false });
   function handleResponse(response) {
     setWeatherData({
+      ready: true,
       temperature: response.data.temperature.current,
       description: response.data.condition.description,
       humidity: response.data.temperature.humidity,
       wind: response.data.wind.speed,
+      iconUrl: "https://ssl.gstatic.com/onebox/weather/64/cloudy.png",
+      city: response.data.city,
+      date: "Tuesday 17:29",
     });
-    setReady(true);
   }
-  if (ready) {
+  if (weatherData.ready) {
     return (
       <div className="Weather">
         <a href="https://www.shecodes.io/" target="_blank" rel="noreferrer">
@@ -42,10 +44,10 @@ export default function Weather(props) {
         <div className="weatherInfo">
           <div className="row">
             <div className="col-9">
-              <h1>San Francisco</h1>
+              <h1>{weatherData.city}</h1>
               <ul>
                 <li>
-                  Tuesday 17:29,{" "}
+                  {weatherData.date}, {""}
                   <span className="text-capitalize description">
                     {weatherData.description}
                   </span>
@@ -57,11 +59,19 @@ export default function Weather(props) {
               </ul>
             </div>
             <div className="col-3">
-              <div>
-                <span className="temperature">
-                  {Math.round(weatherData.temperature)}
-                </span>
-                <span className="unit">°C</span>
+              <div className="row">
+                <div className="col-4">
+                  <img
+                    src={weatherData.iconUrl}
+                    alt="weatherData.description"
+                  />{" "}
+                </div>
+                <div className="col-8">
+                  <span className="temperature">
+                    {Math.round(weatherData.temperature)}
+                  </span>
+                  <span className="unit">°C</span>
+                </div>
               </div>
             </div>
           </div>
