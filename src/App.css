@@ -1,5 +1,20 @@
 .App {
-  border: 1px solid white;
-  margin: 20px 100px 20px 100px;
+  background-color: #f9f7fe;
+}
+
+.App .container {
+  background-color: white;
+  max-width: 800px;
   display: block;
+  margin: 60px auto;
+  border-radius: 10px;
+  padding: 0 12px;
+}
+.App .container footer p {
+  text-align: center;
+  color: #a8a8a8;
+  padding-bottom: 40px;
+}
+.App .container footer a {
+  color: #885df1;
 }

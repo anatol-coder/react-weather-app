@@ -1,4 +1,56 @@
 .Weather {
-  background-color: aquamarine;
-  max-width: 700px;
+  padding: 40px;
+  font-family: helvetica, arial, sans-serif;
+}
+.Weather form {
+  margin: 40px 0;
+  padding-bottom: 30px;
+  border-bottom: 0.8px solid #fcfbfe;
+}
+.Weather form .enterCityButton {
+  color: #a8a8a8;
+  border-radius: 4px;
+  border: none;
+  background-color: #f9f7fe;
+  padding: 15px 0 15px 15px;
+  width: 100%;
+}
+.Weather form .findInfoButton {
+  color: white;
+  background-color: #885df1;
+  font-weight: bold;
+  padding: 15px 50px;
+  width: 100%;
+}
+.Weather .weatherInfo h1 {
+  color: #272142;
+  font-size: 38px;
+  line-height: 48px;
+  font-weight: 700;
+}
+
+.Weather li {
+  list-style: none;
+  color: #a8a8a8;
+}
+.Weather li span {
+  color: #f87082;
+}
+.Weather ul {
+  padding: 0;
+}
+.Weather .temperature {
+  font-size: 80px;
+  color: #212121;
+  font-weight: 700;
+  line-height: 1;
+  margin-left: 10px;
+}
+.Weather .unit {
+  color: #212121;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1;
+  position: relative;
+  top: -34px;
 }
