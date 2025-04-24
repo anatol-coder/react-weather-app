@@ -7,6 +7,7 @@ import axios from "axios";
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
   const [weatherData, setWeatherData] = useState({ ready: false });
+
   function handleResponse(response) {
     setWeatherData({
       ready: true,
@@ -14,7 +15,7 @@ export default function Weather(props) {
       description: response.data.condition.description,
       humidity: response.data.temperature.humidity,
       wind: response.data.wind.speed,
-      iconUrl: "https://ssl.gstatic.com/onebox/weather/64/cloudy.png",
+      iconUrl: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`,
       city: response.data.city,
       date: response.data.time,
     });
