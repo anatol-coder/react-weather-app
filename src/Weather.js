@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Weather.css";
+import WeatherDate from "./WeatherDate";
 import axios from "axios";
 
 export default function Weather(props) {
@@ -13,8 +14,9 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       iconUrl: "https://ssl.gstatic.com/onebox/weather/64/cloudy.png",
       city: response.data.city,
-      date: "Tuesday 17:29",
+      date: response.data.time,
     });
+    console.log(response.data);
   }
   if (weatherData.ready) {
     return (
@@ -47,7 +49,7 @@ export default function Weather(props) {
               <h1>{weatherData.city}</h1>
               <ul>
                 <li>
-                  {weatherData.date}, {""}
+                  <WeatherDate timeStamp={weatherData.date} />, {""}
                   <span className="text-capitalize description">
                     {weatherData.description}
                   </span>
