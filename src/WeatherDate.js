@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function WeatherDate(props) {
   let date = new Date(props.timeStamp * 1000);
   let days = [
