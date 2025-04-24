@@ -1,5 +1,7 @@
 canvas {
-  height: 54x;
-  width: 54px;
-  margin-top: 15px;
+  height: 42x;
+  width: 42px;
+  margin-top: 20px;
+  margin-right: 3px;
+  padding-right: 3px;
 }
