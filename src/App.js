@@ -16,14 +16,6 @@ export default function App() {
               rel="noreferrer"
             >
               open-sourced on GitHub
-            </a>{" "}
-            and{" "}
-            <a
-              href="https://silver-gumption-c38209.netlify.app/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              hosted on Netlify
             </a>
           </p>
         </footer>
